@@ -2,7 +2,12 @@ import React from 'react';
 import { FaEye, FaRegBookmark, FaShareAlt, FaStar } from "react-icons/fa";
 import Image from "react-bootstrap/Image";
 import './allnews.css'
+import { HiOutlineDotsHorizontal } from "react-icons/hi";
+import Dropdown from "react-bootstrap/Dropdown";
+
+
 import Card from "react-bootstrap/Card";
+
 
 
 const AllNews = ({news}) => {
@@ -30,7 +35,21 @@ const AllNews = ({news}) => {
          )}
          <Card.Body>
            <Card.Text className="fw-bold">{type}</Card.Text>
-           <Card.Title>{name}</Card.Title>
+           <div className="d-flex justify-content-between align-items-center">
+             <Card.Title>{name}</Card.Title>
+
+             <Dropdown>
+               <Dropdown.Toggle variant="success" id="dropdown-basic">
+                 <HiOutlineDotsHorizontal />
+               </Dropdown.Toggle>
+
+               <Dropdown.Menu className="border-0 shadow-lg">
+                 <Dropdown.Item href="#/action-1">Edit</Dropdown.Item>
+                 <Dropdown.Item href="#/action-2">Report</Dropdown.Item>
+                 <Dropdown.Item href="#/action-3">Option 3</Dropdown.Item>
+               </Dropdown.Menu>
+             </Dropdown>
+           </div>
            {desc ? (
              <Card.Text>{desc}</Card.Text>
            ) : (
@@ -43,12 +62,12 @@ const AllNews = ({news}) => {
            )}
 
            {category === "3" && (
-             <button className="border w-100 rounded mb-3">
+             <button className="border w-100 rounded mb-3 p-2">
                Visit Website
              </button>
            )}
            {category === "5" && (
-             <button className="border w-100 rounded mb-3">
+             <button className="border w-100 rounded mb-3 p-2">
                Apply on Timesjobs
              </button>
            )}

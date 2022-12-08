@@ -33,15 +33,15 @@ const Category = () => {
   return (
     <div className="my-5 container ">
       <div className="hstack gap-3 d-flex justify-content-between fs-5">
-
-          {categories.map((category) => (
-            <NavLink
-              className="text-decoration-none text-black"
-              key={category.id}
-            >
-              {category.name}
-            </NavLink>
-          ))}
+        {categories.map((category) => (
+          <NavLink
+            to={`/categories/${category.id}`}
+            className="text-decoration-none text-black"
+            key={category.id}
+          >
+            {category.name}
+          </NavLink>
+        ))}
 
         <div className="bg-light border ms-auto">
           <button>Write a Post</button>

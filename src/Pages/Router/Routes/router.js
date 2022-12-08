@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../../../Layers/Main";
 import Home from "../../Home/Home";
 import InvalidPage from "../../InvalidPage/InvalidPage";
+import NewsByCategory from "../../NewsByCategory/NewsByCategory";
 // import AllNews from '../../Home/AllNews/AllNews'
 
 export const router = createBrowserRouter([
@@ -14,10 +15,11 @@ export const router = createBrowserRouter([
         loader: () => fetch("http://localhost:5000/allcategory/news"),
         element: <Home />,
       },
-      // {
-      //   path: "/allnews",
-      //   element: <AllNews />,
-      // },
+      {
+        path: "/categories/:id",
+        loader: ({params}) => fetch(`http://localhost:5000/categories/${params.id}`),
+        element: <NewsByCategory />,
+      },
     ],
   },
   {
