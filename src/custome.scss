@@ -27,6 +27,15 @@ $theme-colors:(
 "sweet-pink":#FF6B6B,
 "deep-pink":#FF6B6B,
 );
+
+$position-values: (
+  0: 0,
+  12:12%,
+  25:25%,
+  50: 50%,
+  75:75%,
+  100: 100%
+) ;
 $grid-breakpoints: (
   xxxs: 0,
   xxs: 320px,
@@ -50,6 +59,7 @@ $container-max-widths: (
   xxl: 1440px,
   xxxl: 1600px
 );
+
 
 
 /* import bootstrap to set changes */
