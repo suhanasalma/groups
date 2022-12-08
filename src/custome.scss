@@ -10,7 +10,7 @@
 
 $theme-colors:(
 "dark-blue": #495DC6,
-"secondary": #3CADA3,
+"light": #3CADA3,
 "green": #37C172,
 "deep-green" : #21C997,
 "dim-green" :#50CF66,
@@ -26,6 +26,7 @@ $theme-colors:(
 "pink":#F06594,
 "sweet-pink":#FF6B6B,
 "deep-pink":#FF6B6B,
+"gray":#DEE2E6,
 );
 
 $position-values: (
@@ -36,6 +37,7 @@ $position-values: (
   75:75%,
   100: 100%
 ) ;
+
 $grid-breakpoints: (
   xxxs: 0,
   xxs: 320px,

@@ -1,10 +1,15 @@
 import React from 'react';
-import HeroSection from './HeroSection/HeroSection';
+import { useLoaderData } from "react-router-dom";
+import AllNews from '../AllNews/AllNews';
 
 const Home = () => {
+  const allNews = useLoaderData()
+  console.log(allNews)
    return (
-     <div className=" bg-secondary">
-       <HeroSection />
+     <div className="">
+       {allNews.map((news) => (
+         <AllNews key={news.id} news={news}/>
+       ))}
      </div>
    );
 };
