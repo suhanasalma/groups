@@ -25,6 +25,16 @@ const Login = ({ loginShow, logfullscreen, setLoginShow, setShow }) => {
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
+    signIn(email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+      });
    
   };
   //handle google sign in
