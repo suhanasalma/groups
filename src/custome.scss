@@ -1,0 +1,56 @@
+
+// $primary: #495DC6;
+// $secondary: #3CADA3;
+// $success: #37C172;
+// $info:  #F4CA64;
+// $warning: #7950F2;
+// $danger:  #4C6FF5;
+// $light: #339AF0;
+// $dark:#22B8CF;
+
+$theme-colors:(
+"dark-blue": #495DC6,
+"secondary": #3CADA3,
+"green": #37C172,
+"deep-green" : #21C997,
+"dim-green" :#50CF66,
+"light-green":#94D82C,
+"yellow":  #F4CA64,
+"purple": #7950F2,
+"blue":  #4C6FF5,
+"light-blue": #339AF0,
+"sky-blue":#22B8CF,
+"light-orange":#FCC418,
+"orange":#FF922B,
+"deep-purple":#CB5DE8,
+"pink":#F06594,
+"sweet-pink":#FF6B6B,
+"deep-pink":#FF6B6B,
+);
+$grid-breakpoints: (
+  xxxs: 0,
+  xxs: 320px,
+  xs: 568px,
+  sm: 667px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px,
+  xxxl: 1600px
+);
+
+$container-max-widths: (
+  xxxs: 0,
+  xxs: 320px,
+  xs: 568px,
+  sm: 667px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px,
+  xxxl: 1600px
+);
+
+
+/* import bootstrap to set changes */
+@import "~bootstrap/scss/bootstrap";
