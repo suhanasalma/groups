@@ -12,12 +12,14 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        loader: () => fetch("http://localhost:5000/allcategory/news"),
+        loader: () =>
+          fetch("https://groups-server.vercel.app/allcategory/news"),
         element: <Home />,
       },
       {
         path: "/categories/:id",
-        loader: ({params}) => fetch(`http://localhost:5000/categories/${params.id}`),
+        loader: ({ params }) =>
+          fetch(`https://groups-server.vercel.app/categories/${params.id}`),
         element: <NewsByCategory />,
       },
     ],

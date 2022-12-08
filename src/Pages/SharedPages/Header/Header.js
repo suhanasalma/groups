@@ -53,7 +53,7 @@ const Header = () => {
 
 
   return (
-    <div className="d-xxs-none">
+    <div className="d-xxs-none d-xl-block">
       <Navbar className="bg-secondary">
         <Container>
           <NavLink to="/">

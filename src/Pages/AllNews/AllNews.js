@@ -37,8 +37,8 @@ const AllNews = ({news}) => {
 
   
    return (
-     <div className="">
-       <Card style={{ width: "40rem" }} className="mb-3">
+     <div className="w-sm-100 card-holder">
+       <Card className="mb-3 card mx-auto">
          {articleImg ? (
            <Card.Img className="card-img" variant="top" src={articleImg} />
          ) : (

@@ -8,13 +8,13 @@ import { SharedContext } from "../../AuthContext/AuthContext";
 
 const Category = () => {
   const [categories, setCategories] = useState([]);
-  const {user} = useContext(SharedContext)
+  const { user } = useContext(SharedContext);
 
   useEffect(() => {
     const controller = new AbortController();
     const signal = controller.signal;
 
-    fetch("http://localhost:5000/allcategory", { signal })
+    fetch("https://groups-server.vercel.app/allcategory", { signal })
       .then((res) => res.json())
       .then((data) => {
         setCategories(data);
