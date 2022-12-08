@@ -16,11 +16,11 @@ const Category = () => {
       .then((res) => res.json())
       .then((data) => {
         setCategories(data);
-        console.log(data);
+        // console.log(data);
       })
       .catch((err) => {
         if (err.name === "AbortError") {
-          console.log("cancelled");
+          // console.log("cancelled");
         } else {
           //handling error
         }

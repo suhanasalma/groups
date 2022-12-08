@@ -33,7 +33,9 @@ const AllNews = ({news}) => {
      companyName,
      category,
    } = news;
-   console.log(category)
+  //  console.log(category)
+
+  
    return (
      <div className="">
        <Card style={{ width: "40rem" }} className="mb-3">
