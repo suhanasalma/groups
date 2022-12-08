@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import './Category.css'
+import "./Category.css";
+import Dropdown from "react-bootstrap/Dropdown";
+import DropdownButton from "react-bootstrap/DropdownButton";
+import { HiUserGroup } from "react-icons/hi";
 
 const Category = () => {
   const [categories, setCategories] = useState([]);
@@ -28,8 +31,6 @@ const Category = () => {
     };
   }, []);
 
-
-
   return (
     <div className="my-5 container ">
       <div className="hstack gap-3 d-flex justify-content-between fs-5">
@@ -43,11 +44,17 @@ const Category = () => {
           </NavLink>
         ))}
 
-        <div className="bg-light border ms-auto">
-          <button>Write a Post</button>
+        <div className="bg-gray fw-bold ms-auto">
+          <DropdownButton
+            className=""
+            id="dropdown-basic-button"
+            title="Write a Post"
+          ></DropdownButton>
         </div>
-        <div classname="bg-light border">
-          <button>Join Group</button>
+        <div>
+          <button className="border bg-darkBlue border-0 text-white p-2 fs-6 d-flex align-items-center gap-2">
+            <HiUserGroup /> Join Group
+          </button>
         </div>
       </div>
       <hr />

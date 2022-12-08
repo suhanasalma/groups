@@ -1,9 +1,18 @@
 import React from 'react';
-import { FaEye, FaRegBookmark, FaShareAlt, FaStar } from "react-icons/fa";
+import {
+  FaEye,
+  FaShareAlt,
+  FaRegCalendarAlt,
+  FaMicroscope,
+  FaNewspaper,
+} from "react-icons/fa";
 import Image from "react-bootstrap/Image";
 import './allnews.css'
-import { HiOutlineDotsHorizontal } from "react-icons/hi";
+import { HiOutlineDotsHorizontal, HiShoppingBag } from "react-icons/hi";
 import Dropdown from "react-bootstrap/Dropdown";
+import { FcCalendar } from "react-icons/fc";
+import { TfiBag, TfiLocationPin } from "react-icons/tfi";
+
 
 
 import Card from "react-bootstrap/Card";
@@ -22,7 +31,7 @@ const AllNews = ({news}) => {
      date,
      address,
      companyName,
-     category
+     category,
    } = news;
    console.log(category)
    return (
@@ -34,7 +43,19 @@ const AllNews = ({news}) => {
            ""
          )}
          <Card.Body>
-           <Card.Text className="fw-bold">{type}</Card.Text>
+           <Card.Text className="fw-bold fs-5 d-flex gap-2 align-items-center">
+             {category === "5" && (
+               <HiShoppingBag className="fs-4 text-darkBlue" />
+             )}
+             {category === "3" && <FcCalendar className="fs-4 " />}
+             {category === "4" && (
+               <FaMicroscope className="fs-4 text-deep-pink" />
+             )}
+             {category === "2" && (
+               <FaNewspaper className="fs-4 text-deep-purple" />
+             )}
+             {type}
+           </Card.Text>
            <div className="d-flex justify-content-between align-items-center">
              <Card.Title>{name}</Card.Title>
 
@@ -54,20 +75,32 @@ const AllNews = ({news}) => {
              <Card.Text>{desc}</Card.Text>
            ) : (
              <Card.Text>
-               <div className="d-flex gap-5 align-items-center">
-                 {date ? <p>{date}</p> : <p>{companyName}</p>}
-                 <p>{address}</p>
+               <div className="d-flex gap-5 align-items-center fw-bold">
+                 {date ? (
+                   <p>
+                     <FaRegCalendarAlt />
+                     <span className="ms-1">{date}</span>
+                   </p>
+                 ) : (
+                   <p>
+                     <TfiBag />
+                     <span className="ms-1">{companyName}</span>
+                   </p>
+                 )}
+                 <p>
+                   <TfiLocationPin /> <span className="ms-1">{address}</span>{" "}
+                 </p>
                </div>
              </Card.Text>
            )}
 
            {category === "3" && (
-             <button className="border w-100 rounded mb-3 p-2">
+             <button className="border bg-transparent text-deep-pink fw-bold w-100 rounded mb-3 p-2">
                Visit Website
              </button>
            )}
            {category === "5" && (
-             <button className="border w-100 rounded mb-3 p-2">
+             <button className="bg-transparent text-deep-green fw-bold border w-100 rounded mb-3 p-2">
                Apply on Timesjobs
              </button>
            )}
