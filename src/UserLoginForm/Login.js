@@ -44,7 +44,7 @@ const Login = ({ loginShow, logfullscreen, setLoginShow, setShow }) => {
         // Signed in
         const user = userCredential.user;
         console.log(user)
-      //   navigate('/')
+        navigate('/')
 
         // ...
       })

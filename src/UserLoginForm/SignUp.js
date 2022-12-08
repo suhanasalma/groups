@@ -50,7 +50,7 @@ const SignUp = ({ show, fullscreen, setShow, setLoginShow }) => {
         // Signed in
         const user = userCredential.user;
         console.log(user);
-        //   navigate('/')
+          navigate('/')
 
         // ...
       })
