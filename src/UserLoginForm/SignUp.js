@@ -34,6 +34,8 @@ const SignUp = ({ show, fullscreen, setShow, setLoginShow }) => {
           // Signed in
           const user = userCredential.user;
           console.log(user)
+           navigate("/");
+           setShow(false);
           // ...
         })
         .catch((error) => {
@@ -51,6 +53,7 @@ const SignUp = ({ show, fullscreen, setShow, setLoginShow }) => {
         const user = userCredential.user;
         console.log(user);
           navigate('/')
+          setShow(false);
 
         // ...
       })
